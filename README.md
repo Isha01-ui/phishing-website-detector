@@ -5,7 +5,7 @@ Rule-based phishing URL detector using 7 heuristics: IP address detection, @ sym
 ## Files
 - `src/detector.py` — Phishing URL detector with 7 heuristic rules.
 - `src/main.py` — Demo runner.
-- `tests/` — place unit tests here.
+- `tests/` —  Unit test suite (10 test cases).
 - `requirements.txt` — Python dependencies.
 
 ## Setup
