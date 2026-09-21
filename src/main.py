@@ -1,19 +1,17 @@
-"""
-Demo runner for Phishing Website Detector
-Run: python3 src/main.py
-"""
 from detector import PhishDetector
 
-def demo():
-    d = PhishDetector()
-    samples = [
-        "http://192.168.0.5/login",
-        "https://secure-bank.example.com/verify",
-        "https://github.com/",
-        "http://very-long-domain-name-with-lots-of-characters-example.com/account"
-    ]
-    for u in samples:
-        print(u, "->", "PHISH" if d.is_suspicious_url(u) else "OK")
+test_urls = [
+    "https://google.com",
+    "http://192.168.1.1/login/verify",
+    "http://paypal-secure-account-verify.com/update",
+    "https://login.microsoftonline.com@malicious.ru/signin",
+    "https://amazon.com",
+    "http://very-long-suspicious-url-login-verify-account-confirm.xyz/path/to/fake"
+]
 
-if __name__ == "__main__":
-    demo()
+detector = PhishDetector()
+for url in test_urls:
+    result = detector.analyze(url)
+    print(f"\n[{result['verdict']}] {url}")
+    for flag in result['flags']:
+        print(f"  ⚠ {flag}")
