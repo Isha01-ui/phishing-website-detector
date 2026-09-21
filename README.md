@@ -1,4 +1,4 @@
-# Phishing Website Detector — Starter
+Phishing Website Detector
 
 Minimal Python project that demonstrates simple heuristic detection for phishing URLs.
 Intended as a starting point for a machine-learning or rule-based phishing detector.
