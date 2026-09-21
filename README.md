@@ -1,7 +1,6 @@
 Phishing Website Detector
 
-Minimal Python project that demonstrates simple heuristic detection for phishing URLs.
-Intended as a starting point for a machine-learning or rule-based phishing detector.
+Rule-based phishing URL detector using 7 heuristics: IP address detection, @ symbol spoofing, excessive subdomains, suspicious keywords, long URLs, hyphen abuse, and non-standard ports.
 
 ## Files
 - `src/detector.py` — Detector class (heuristics placeholder).
